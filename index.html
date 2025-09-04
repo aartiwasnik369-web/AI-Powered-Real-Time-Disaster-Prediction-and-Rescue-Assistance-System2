@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flood & Disaster Risk Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <header>
+    <h1>Flood & Disaster Risk Dashboard</h1>
+    <p>Predict flood risk, detect humans/animals, and explore risk areas on the map.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Flood Risk Prediction</h2>
+      <form id="flood-form">
+        <label>Rainfall (mm)</label>
+        <input id="rainfall" type="number" step="0.1" min="0" placeholder="e.g. 45">
+        <label>Water Level (m)</label>
+        <input id="water_level" type="number" step="0.1" min="0" placeholder="e.g. 3.2">
+        <button type="submit">Predict</button>
+      </form>
+      <div id="prediction-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Object Detection (Humans & Animals)</h2>
+      <input id="image-input" type="file" accept="image/*">
+      <button id="detect-btn">Detect</button>
+      <pre id="detection-output" class="result"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Risk Map</h2>
+      <div id="map" style="height: 420px;"></div>
+      <div class="legend">
+        <span class="dot high"></span> High
+        <span class="dot medium"></span> Medium
+        <span class="dot low"></span> Low
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Historical Disasters (sample)</h2>
+      <button id="load-hist">Load sample</button>
+      <div id="hist-table"></div>
+    </section>
+  </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
