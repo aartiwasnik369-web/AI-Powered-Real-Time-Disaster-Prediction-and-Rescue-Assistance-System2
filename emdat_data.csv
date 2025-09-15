@@ -1,6 +1,0 @@
-dis_no,year,disaster_type,country,total_deaths,total_affected,total_damages
-1,2018,Flood,India,10,1000,1000000.0
-2,2019,Cyclone,India,5,500,500000.0
-3,2020,Flood,India,3,800,800000.0
-4,2021,Landslide,India,2,200,200000.0
-5,2022,Flood,India,4,600,600000.0
